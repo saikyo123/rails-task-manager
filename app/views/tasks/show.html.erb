@@ -1,0 +1,12 @@
+<div class="container">
+  <h1><%= @task.title %></h1>
+  <div class="card">
+    <div class="card-body">
+      <p><%= @task.details %></p>
+    </div>
+  </div>
+  <%= link_to "Delete", task_path(@task),   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+  <%# <button type="button" class="btn btn-primary">
+    <%= link_to "Return", "/tasks" %>
+  <%# </button> %>
+</div>
